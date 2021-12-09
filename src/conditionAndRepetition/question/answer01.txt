@@ -1,0 +1,147 @@
+1. 
+class IfReit {
+    public static void main(String[] args) {
+        int num = 120;
+
+        if(num > 0 && (num % 2) == 0)
+            System.out.println("양수이면서 짝수");
+    }
+}
+
+*추가 
+1) 2로 나누어서 나누어 떨어지면 짝수 그렇지 않으면 홀수
+2) || 연산자일 경우 둘 중 하나만 참이어도 참이 반환되고
+   && 연산자일 경우 둘 다 참이어야 참이 반환되므로
+   || 일 때는 앞의 조건식이 참일 가능성이 높은것을 두고 그것이 참이면 
+   뒤에 것을 확인하지 않고 참을 반환하므로 효율적
+   && 일 때는 앞의 조건식이 거짓일 가능성이 높은 것을 두고 그것이 거짓이면
+   뒤에 것을 확인하지 않고 거짓을 반환하므로 효율적  
+2. 
+
+3.
+class SwitchBreakToIE {
+    public static void main(String[] args) {
+        int n = 3;
+        
+        if(n == 1)
+            System.out.println("Simple Java");
+        else if(n == 2)
+            System.out.println("Funny Java");
+        else if(n == 3)
+            System.out.println("Fantastic Java");
+        else
+            System.out.println("The best programming language");
+        
+        System.out.println("Do you like Java?");
+    }
+}
+
+4.
+1)
+class Answer04-1 {
+	public void answer() {
+		int sum01 = 0;
+		for(int i = 1; i<100; i++) {
+			sum01 += i;
+		}
+		System.out.println("04. 1)" + sum01);
+	}
+}
+
+2)
+
+class Answer04-2 {
+	public void answer() {
+		int sum02 = 0;
+		int j = 1;
+		while(j <100) {
+			sum02 += j;
+			j ++;
+		}
+		System.out.println("04. 2)" + sum02);		
+	}
+}
+class SumTo100 {
+1) 
+
+2)
+    public static void main(String[] args) {
+        int num = 1;
+        int sum = 0;
+    
+        while(num<100) {
+            sum += num;
+            num++;
+        }
+        
+        System.out.println(sum);
+    }
+}
+
+5. 
+class PrintRev {
+    public static void main(String[] args) {
+        int num = 1;
+         
+        while(num <= 100)
+            System.out.println(num++);
+        
+        do {
+            System.out.println(--num);
+        } while(num>1);
+    }
+}
+
+6.
+class Multiple2And7 {
+    public static void main(String[] args) {
+        int num = 1;
+        int sum = 0;
+        
+        while(num <= 1000) {
+            if((num % 2) == 0 && (num % 7) == 0) {
+                System.out.println(num);
+                sum += num;
+            }
+            num++;
+        }
+
+        System.out.println("합: " + sum);
+    }
+}
+
+7.
+
+class ByTimes5 {
+    public static void main(String[] args) {
+        for(int i = 1; i < 10; i++)
+            System.out.println("5 x " + i + " = " + (5 * i));
+    }
+}
+
+8.
+class PartialByTimes {
+    public static void main(String[] args) {
+        for(int i = 2; i < 10; i += 2) {
+            for(int j = 1; j < 10; j++) {
+                System.out.println(i + " x " + j + " = " + (i * j));
+                
+                if(j >= i)
+                    break;
+            }
+        }
+    }
+}
+
+9.
+class Search99 {
+    public static void main(String[] args) {
+        for(int i = 0; i < 10; i++) {
+            for(int j = 0; j < 10; j++) {
+                if((i * 10 + j) + (j * 10 + i) == 99)
+                    System.out.println(i + ", " + j);
+            }
+        }
+    }
+}
+
