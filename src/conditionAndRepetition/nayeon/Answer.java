@@ -1,4 +1,5 @@
 package conditionAndRepetition.nayeon;
+lsmsep
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,24 +11,24 @@ class Answer01 implements AnswerInterface{
 		System.out.println("01. ");
 		int num = 120;		
 		if((num > 0) && ((num % 2) == 0)) {
-			System.out.println("¾ç¼öÀÌ¸é¼­ Â¦¼ö");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Ì¸é¼­ Â¦ï¿½ï¿½");
 		}	
 	}
 
-	//1) 2·Î ³ª´©¾î¼­ ³ª´©¾î ¶³¾îÁö¸é Â¦¼ö ±×·¸Áö ¾ÊÀ¸¸é È¦¼ö
-	//2) || ¿¬»êÀÚÀÏ °æ¿ì µÑ Áß ÇÏ³ª¸¸ ÂüÀÌ¾îµµ ÂüÀÌ ¹ÝÈ¯µÇ°í
-	//   && ¿¬»êÀÚÀÏ °æ¿ì µÑ ´Ù ÂüÀÌ¾î¾ß ÂüÀÌ ¹ÝÈ¯µÇ¹Ç·Î
-	//   || ÀÏ ¶§´Â ¾ÕÀÇ Á¶°Ç½ÄÀÌ ÂüÀÏ °¡´É¼ºÀÌ ³ôÀº°ÍÀ» µÎ°í ±×°ÍÀÌ ÂüÀÌ¸é 
-	//   µÚ¿¡ °ÍÀ» È®ÀÎÇÏÁö ¾Ê°í ÂüÀ» ¹ÝÈ¯ÇÏ¹Ç·Î È¿À²Àû
-	//   && ÀÏ ¶§´Â ¾ÕÀÇ Á¶°Ç½ÄÀÌ °ÅÁþÀÏ °¡´É¼ºÀÌ ³ôÀº °ÍÀ» µÎ°í ±×°ÍÀÌ °ÅÁþÀÌ¸é
-	//   µÚ¿¡ °ÍÀ» È®ÀÎÇÏÁö ¾Ê°í °ÅÁþÀ» ¹ÝÈ¯ÇÏ¹Ç·Î È¿À²Àû  
+	//1) 2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½î¼­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Â¦ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¦ï¿½ï¿½
+	//2) || ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾îµµ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ç°ï¿½
+	//   && ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ç¹Ç·ï¿½
+	//   || ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î°ï¿½ ï¿½×°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ 
+	//   ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï¹Ç·ï¿½ È¿ï¿½ï¿½ï¿½ï¿½
+	//   && ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Î°ï¿½ ï¿½×°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½
+	//   ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï¹Ç·ï¿½ È¿ï¿½ï¿½ï¿½ï¿½  
 }
 
 class Answer02 implements AnswerInterface{
 	public void answer() {
 		System.out.println("02. ");
 		int num = 120;		
-		String bool = (num>0 && (num % 2)==0)? "¾ç¼öÀÌ¸é¼­ Â¦¼ö" : "µÑ´Ù ¾Æ´Ô";
+		String bool = (num>0 && (num % 2)==0)? "ï¿½ï¿½ï¿½ï¿½Ì¸é¼­ Â¦ï¿½ï¿½" : "ï¿½Ñ´ï¿½ ï¿½Æ´ï¿½";
 		System.out.println(bool);
 	}
 }
@@ -101,7 +102,7 @@ class Answer07 implements AnswerInterface{
 	public void answer() {
 		System.out.println("07. ");
 		for(int i = 1; i<10; i++) {
-			System.out.println("5 ¡¿ "+i+" = "+(5*i));
+			System.out.println("5 ï¿½ï¿½ "+i+" = "+(5*i));
 		}
 	}
 }
@@ -111,9 +112,9 @@ class Answer08 implements AnswerInterface{
 		System.out.println("08. ");
 		for(int i = 1 ; i<10; i++) {
 			if((i % 2) == 0){
-			System.out.println(i+" ´Ü ");
+			System.out.println(i+" ï¿½ï¿½ ");
 				for(int j =1; j<=i ; j++) {				
-					System.out.println(i+" ¡¿ "+j+" = "+i*j);
+					System.out.println(i+" ï¿½ï¿½ "+j+" = "+i*j);
 				}
 			}
 		}
@@ -122,17 +123,17 @@ class Answer08 implements AnswerInterface{
 
 class Answer09 implements AnswerInterface{
 	public void answer() {
-		System.out.println("09. ¹®Á¦ÀÇ ÀÇµµ°¡ ¹«¾ùÀÎ°¡?");
-		System.out.println("1) µÎ ÀÚ¸® ab ba ¸¦ ´õÇØ¼­ 99°¡ ³ª¿À´Â°¡?");
+		System.out.println("09. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Çµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Î°ï¿½?");
+		System.out.println("1) ï¿½ï¿½ ï¿½Ú¸ï¿½ ab ba ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ 99ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Â°ï¿½?");
 
-		List<int[]> permu_1 = new ArrayList<>(); // ¼ø¿­ -> ¼ø¼­ »ó°ü O
+		List<int[]> permu_1 = new ArrayList<>(); // ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ O
 		
 		String abToString = "";
 		String baToString = "";
 		int ab = 0;
 		int ba = 0;
 		
-		// ¼ø¿­ »Ì±â
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½Ì±ï¿½
 		for(int tempA = 1; tempA < 10; tempA++) {
 			for(int tempB = 1 ; tempB < 10; tempB++) {
 				abToString = Integer.toString(tempA) + Integer.toString(tempB);
@@ -147,8 +148,8 @@ class Answer09 implements AnswerInterface{
 			}
 		}
 		
-		// Á¶ÇÕÀ¸·Î ¸¸µé±â
-		List<int[]> combi_1 = new ArrayList<>(permu_1); // Á¶ÇÕ -> ¼ø¼­ »ó°ü X
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+		List<int[]> combi_1 = new ArrayList<>(permu_1); // ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ X
 		for(int i = 0; i<combi_1.size(); i++) {
 			int[] temp = combi_1.get(i);
 			for(int j = i+1; j<(combi_1.size()); j++) {
@@ -159,17 +160,17 @@ class Answer09 implements AnswerInterface{
 			}
 		}
 		
-		System.out.println("¼ø¿­");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		printList(permu_1);
-		System.out.println("Á¶ÇÕ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		printList(combi_1);
 		
 		System.out.println();
-		System.out.println("2) a+b=9 ÀÌ¸é µÇ´Â°Ç°¡");
-		List<int[]> permu_2 = new ArrayList<>(); // ¼ø¿­ -> ¼ø¼­ »ó°ü O
+		System.out.println("2) a+b=9 ï¿½Ì¸ï¿½ ï¿½Ç´Â°Ç°ï¿½");
+		List<int[]> permu_2 = new ArrayList<>(); // ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ O
 		
 		
-		// ¼ø¿­ »Ì±â
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½Ì±ï¿½
 		for(int tempA = 1; tempA < 10; tempA++) {
 			for(int tempB = 1 ; tempB < 10; tempB++) {
 				if((tempA + tempB) == 9) {
@@ -178,8 +179,8 @@ class Answer09 implements AnswerInterface{
 			}
 		}
 		
-		// Á¶ÇÕÀ¸·Î ¸¸µé±â
-		List<int[]> combi_2 = new ArrayList<>(permu_2); // Á¶ÇÕ -> ¼ø¼­ »ó°ü X
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+		List<int[]> combi_2 = new ArrayList<>(permu_2); // ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ X
 		for(int i = 0; i<combi_2.size(); i++) {
 			int[] temp = combi_2.get(i);
 			for(int j = i+1; j<(combi_2.size()); j++) {
@@ -190,9 +191,9 @@ class Answer09 implements AnswerInterface{
 			}
 		}		
 		
-		System.out.println("¼ø¿­");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		printList(permu_2);
-		System.out.println("Á¶ÇÕ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		printList(combi_2);
 	}
 	
@@ -226,8 +227,8 @@ public class Answer {
 		a8.answer();
 		a9.answer();
 		
-		System.out.println("ÀÚÃ¼ Æò°¡");
-		System.out.println("9¹ø ¹®Á¦ ³Ê¹« ¾î·Æ°Ô Ç¬ °Í °°´Ù... ¹Ý¼ºÇÑ´Ù.");
+		System.out.println("ï¿½ï¿½Ã¼ ï¿½ï¿½");
+		System.out.println("9ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¹ï¿½ ï¿½ï¿½Æ°ï¿½ Ç¬ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½... ï¿½Ý¼ï¿½ï¿½Ñ´ï¿½.");
 		
     }
 }
