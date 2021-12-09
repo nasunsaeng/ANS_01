@@ -1,5 +1,4 @@
 package conditionAndRepetition.nayeon;
-lsmsep
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,24 +10,24 @@ class Answer01 implements AnswerInterface{
 		System.out.println("01. ");
 		int num = 120;		
 		if((num > 0) && ((num % 2) == 0)) {
-			System.out.println("����̸鼭 ¦��");
+			System.out.println("양수이면서 짝수");
 		}	
 	}
 
-	//1) 2�� ����� ������ �������� ¦�� �׷��� ������ Ȧ��
-	//2) || �������� ��� �� �� �ϳ��� ���̾ ���� ��ȯ�ǰ�
-	//   && �������� ��� �� �� ���̾�� ���� ��ȯ�ǹǷ�
-	//   || �� ���� ���� ���ǽ��� ���� ���ɼ��� �������� �ΰ� �װ��� ���̸� 
-	//   �ڿ� ���� Ȯ������ �ʰ� ���� ��ȯ�ϹǷ� ȿ����
-	//   && �� ���� ���� ���ǽ��� ������ ���ɼ��� ���� ���� �ΰ� �װ��� �����̸�
-	//   �ڿ� ���� Ȯ������ �ʰ� ������ ��ȯ�ϹǷ� ȿ����  
+	//1) 2로 나누어서 나누어 떨어지면 짝수 그렇지 않으면 홀수
+	//2) || 연산자일 경우 둘 중 하나만 참이어도 참이 반환되고
+	//   && 연산자일 경우 둘 다 참이어야 참이 반환되므로
+	//   || 일 때는 앞의 조건식이 참일 가능성이 높은것을 두고 그것이 참이면 
+	//   뒤에 것을 확인하지 않고 참을 반환하므로 효율적
+	//   && 일 때는 앞의 조건식이 거짓일 가능성이 높은 것을 두고 그것이 거짓이면
+	//   뒤에 것을 확인하지 않고 거짓을 반환하므로 효율적  
 }
 
 class Answer02 implements AnswerInterface{
 	public void answer() {
 		System.out.println("02. ");
 		int num = 120;		
-		String bool = (num>0 && (num % 2)==0)? "����̸鼭 ¦��" : "�Ѵ� �ƴ�";
+		String bool = (num>0 && (num % 2)==0)? "양수이면서 짝수" : "둘다 아님";
 		System.out.println(bool);
 	}
 }
@@ -102,7 +101,7 @@ class Answer07 implements AnswerInterface{
 	public void answer() {
 		System.out.println("07. ");
 		for(int i = 1; i<10; i++) {
-			System.out.println("5 �� "+i+" = "+(5*i));
+			System.out.println("5 × "+i+" = "+(5*i));
 		}
 	}
 }
@@ -112,9 +111,9 @@ class Answer08 implements AnswerInterface{
 		System.out.println("08. ");
 		for(int i = 1 ; i<10; i++) {
 			if((i % 2) == 0){
-			System.out.println(i+" �� ");
+			System.out.println(i+" 단 ");
 				for(int j =1; j<=i ; j++) {				
-					System.out.println(i+" �� "+j+" = "+i*j);
+					System.out.println(i+" × "+j+" = "+i*j);
 				}
 			}
 		}
@@ -123,17 +122,17 @@ class Answer08 implements AnswerInterface{
 
 class Answer09 implements AnswerInterface{
 	public void answer() {
-		System.out.println("09. ������ �ǵ��� �����ΰ�?");
-		System.out.println("1) �� �ڸ� ab ba �� ���ؼ� 99�� �����°�?");
+		System.out.println("09. 문제의 의도가 무엇인가?");
+		System.out.println("1) 두 자리 ab ba 를 더해서 99가 나오는가?");
 
-		List<int[]> permu_1 = new ArrayList<>(); // ���� -> ���� ��� O
+		List<int[]> permu_1 = new ArrayList<>(); // 순열 -> 순서 상관 O
 		
 		String abToString = "";
 		String baToString = "";
 		int ab = 0;
 		int ba = 0;
 		
-		// ���� �̱�
+		// 순열 뽑기
 		for(int tempA = 1; tempA < 10; tempA++) {
 			for(int tempB = 1 ; tempB < 10; tempB++) {
 				abToString = Integer.toString(tempA) + Integer.toString(tempB);
@@ -148,8 +147,8 @@ class Answer09 implements AnswerInterface{
 			}
 		}
 		
-		// �������� �����
-		List<int[]> combi_1 = new ArrayList<>(permu_1); // ���� -> ���� ��� X
+		// 조합으로 만들기
+		List<int[]> combi_1 = new ArrayList<>(permu_1); // 조합 -> 순서 상관 X
 		for(int i = 0; i<combi_1.size(); i++) {
 			int[] temp = combi_1.get(i);
 			for(int j = i+1; j<(combi_1.size()); j++) {
@@ -160,17 +159,17 @@ class Answer09 implements AnswerInterface{
 			}
 		}
 		
-		System.out.println("����");
+		System.out.println("순열");
 		printList(permu_1);
-		System.out.println("����");
+		System.out.println("조합");
 		printList(combi_1);
 		
 		System.out.println();
-		System.out.println("2) a+b=9 �̸� �Ǵ°ǰ�");
-		List<int[]> permu_2 = new ArrayList<>(); // ���� -> ���� ��� O
+		System.out.println("2) a+b=9 이면 되는건가");
+		List<int[]> permu_2 = new ArrayList<>(); // 순열 -> 순서 상관 O
 		
 		
-		// ���� �̱�
+		// 순열 뽑기
 		for(int tempA = 1; tempA < 10; tempA++) {
 			for(int tempB = 1 ; tempB < 10; tempB++) {
 				if((tempA + tempB) == 9) {
@@ -179,8 +178,8 @@ class Answer09 implements AnswerInterface{
 			}
 		}
 		
-		// �������� �����
-		List<int[]> combi_2 = new ArrayList<>(permu_2); // ���� -> ���� ��� X
+		// 조합으로 만들기
+		List<int[]> combi_2 = new ArrayList<>(permu_2); // 조합 -> 순서 상관 X
 		for(int i = 0; i<combi_2.size(); i++) {
 			int[] temp = combi_2.get(i);
 			for(int j = i+1; j<(combi_2.size()); j++) {
@@ -191,9 +190,9 @@ class Answer09 implements AnswerInterface{
 			}
 		}		
 		
-		System.out.println("����");
+		System.out.println("순열");
 		printList(permu_2);
-		System.out.println("����");
+		System.out.println("조합");
 		printList(combi_2);
 	}
 	
@@ -227,10 +226,8 @@ public class Answer {
 		a8.answer();
 		a9.answer();
 		
-		System.out.println("��ü ��");
-		System.out.println("9�� ���� �ʹ� ��ư� Ǭ �� ����... �ݼ��Ѵ�.");
+		System.out.println("자체 평가");
+		System.out.println("9번 문제 너무 어렵게 푼 것 같다... 반성한다.");
 		
     }
 }
-
-
