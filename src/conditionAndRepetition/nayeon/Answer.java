@@ -27,7 +27,7 @@ class Answer02 implements AnswerInterface{
 	public void answer() {
 		System.out.println("02. ");
 		int num = 120;		
-		String bool = (num>0 && (num % 2)==0)? "양수이면서 짝수" : "둘다 아님";
+		String bool = (num>0 && (num % 2)==0) ? "양수이면서 짝수" : "둘다 아님";
 		System.out.println(bool);
 	}
 }
